@@ -4,7 +4,7 @@
 
 
 %%
-d3d4d5
+denemeeeee8
 true|false		printf("BOOLEAN\n");
 ;			printf("SEMICOLON\n");
 .			printf("Syntax Error!");
