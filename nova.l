@@ -1,4 +1,3 @@
-
 %{
 #include "nova.h"
 %}
@@ -8,13 +7,13 @@
 [0-9]       { yylval.char_type = DIGIT; return DIGIT; }
 [ \t]       { yylval.char_type = WHITESPACE; return WHITESPACE; }
 [.,;:!?]    { yylval.char_type = PUNCTUATION; return PUNCTUATION; }
-[^a-zA-Z0-9 \t.,;:!?]  { yylval.char_type = SPECIAL_CHAR; return SPECIAL_CHAR; }
+[!\"#\$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]  { yylval.char_type = SPECIAL_CHAR; return SPECIAL_CHAR; }
 \n          { yylval.char_type = EOL; return EOL; }
 "print"     { yylval.char_type = PRINT; return PRINT; } // Print karakteri eklendi
-.           { yylval.char_type = ERROR; return ERROR; }  
+.           { yylval.char_type = ERROR; return ERROR; }
 
 %%
 
 int yywrap() {
-    return 1; 
-%%
+    return 1;
+
