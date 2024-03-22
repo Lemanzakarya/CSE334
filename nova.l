@@ -4,8 +4,7 @@
 
 
 %%
-deneme9abla
-
+sonolsun
 true|false		printf("BOOLEAN\n");
 ;			printf("SEMICOLON\n");
 .			printf("Syntax Error!");
