@@ -1,7 +1,8 @@
-#define TYPE 1
-#define NAME 2
-#define TABLE_PREFIX 3
-#define PORT 4
-#define COLON 5
-#define IDENTIFIER 6
-#define INTEGER 7
+#define LETTER 1    // Harf
+#define DIGIT 2     // Rakam
+#define WHITESPACE 3 // Boşluk karakteri (örneğin, boşluk veya sekme)
+#define PUNCTUATION 4 // Noktalama işareti
+#define SPECIAL_CHAR 5
+#define EOL 6
+#define ERROR 7
+#define PRINT 8
