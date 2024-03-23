@@ -9,6 +9,7 @@
   - [Members](#members)
   - [Purpose](#purpose)
   - [BNF form](#bnfform)
+  - [Running instructions](#runinst)
   
 
 ## Members
@@ -68,4 +69,7 @@ In essence, the overarching goal of the Nova language is to simplify character c
 
 <variable>     : CONST | VARIABLE ;
 ```
+
+### Running Instruction
+
 
