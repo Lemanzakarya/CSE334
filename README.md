@@ -71,5 +71,11 @@ In essence, the overarching goal of the Nova language is to simplify character c
 ```
 
 ### Running Instruction
+> make nova
 
+> ./nova < example.nova
+
+...( some output )...
+
+> make clean
 
