@@ -1,6 +1,7 @@
 %{
 #include <stdio.h>
 #include "nova.h"
+extern YYSTYPE yylval;
 %}
 
 %%
@@ -16,5 +17,7 @@
 %%
 
 int yywrap() {
-    return 1;
+    return 1;
 }
+
+
