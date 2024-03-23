@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <nova.h>
+#include "nova.h"
 
 extern FILE *yyin;
 extern int yylex();
