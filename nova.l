@@ -1,7 +1,6 @@
 %{
 #include <stdio.h>
 #include "nova.h"
-int yylval;
 %}
 
 %%
@@ -18,5 +17,4 @@ int yylval;
 
 int yywrap() {
     return 1;
-
 }
