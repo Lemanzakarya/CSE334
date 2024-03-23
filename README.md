@@ -28,4 +28,44 @@ Furthermore, Nova's design prioritizes simplicity and ease of use, ensuring acce
 
 In essence, the overarching goal of the Nova language is to simplify character counting tasks, empower users with actionable insights derived from textual data, and foster efficiency and productivity in a wide array of applications and use cases.
 
+### Syntax:
+
+```
+
+<prog>         : <stmts> ;
+
+<stmts>        : <stmt> | <stmt> <semicolon> <stmts> ;
+
+<stmt>         : <expr> | <if_stmt> | <while_loop> | <for_loop> | <print_stmt> | <func> | <IO_stmt> | <assignment> ;
+
+<if_stmt>      : IF_STMT OPEN_PARANTHESIS <expr> CLOSE_PARANTHESIS OPEN_CURLY <stmts> CLOSE_CURLY <else_part> ;
+
+<else_part>    : ELSE_STMT OPEN_CURLY <stmts> CLOSE_CURLY | ELSE_IF_STMT OPEN_PARANTHESIS <expr> CLOSE_PARANTHESIS OPEN_CURLY <stmts> CLOSE_CURLY <else_part> | ;
+
+<while_loop>   : WHILE_LOOP OPEN_PARANTHESIS <logic_expr> CLOSE_PARANTHESIS OPEN_CURLY <stmts> CLOSE_CURLY ;
+
+<for_loop>     : FOR_LOOP OPEN_PARANTHESIS <type> VARIABLE COLON VARIABLE CLOSE_PARANTHESIS OPEN_CURLY <stmts> CLOSE_CURLY ;
+
+<type>         : INT_TYPE | FLOAT_TYPE | STRING_TYPE | BOOLEAN_TYPE | CHAR_TYPE | CONSTANT | VOID_TYPE ;
+
+<expr>         : <expr> MINUS <term> | <expr> PLUS <term> | <term> ;
+
+<logic_expr>   : <term> EQUALITY_CHECK <term> | <term> NOT_EQUAL_CHECK <term> | <term> AND_OP <term> | <term> OR_OP <term> | <term> SMALLER_OP <term> | <term> GREATER_OR_EQUAL_OP <term> | <term> SMALLER_OR_EQUAL_OP <term> | NOT_OP <term> ;
+
+<term>         : <term> DIVIDE <factor> | <term> TIMES <factor> | <factor> ;
+
+<factor>       : CONSTANT ;
+
+<print_stmt>   : PRINT OPEN_PARENTHESIS <expr> CLOSE_PARENTHESIS ;
+
+<func>         : FUNCTION <type> <variable> OPEN_PARENTHESIS <func_args> CLOSE_PARENTHESIS ;
+
+<func_args>    : <type> <variable> | <type> <variable> COMMA <func_args> ;
+
+<IO_stmt>      : IO_OP OPEN_PARENTHESIS VARIABLE VARIABLE CLOSE_PARENTHESIS ;
+
+<assignment>   : <type> <variable> EQUAL_SIGN <variable> ;
+
+<variable>     : CONST | VARIABLE ;
+```
 
