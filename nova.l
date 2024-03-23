@@ -1,12 +1,10 @@
 %{
-#include <stdio.h>
 #include "nova.h"
-int yylval;
 %}
 
 %%
-[a-zA-Z]    { yylval.char_type = LETTER; return LETTER; }
-[0-9]       { yylval.char_type = DIGIT; return DIGIT; }
+[a-zA-Z]    { yylval.letter = *yytext; return LETTER; }
+[0-9]       { yylval.number = atoi(yytext); return DIGIT; }
 [ \t]       { yylval.char_type = WHITESPACE; return WHITESPACE; }
 [.,;:!?]    { yylval.char_type = PUNCTUATION; return PUNCTUATION; }
 [!\"#\$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~]  { yylval.char_type = SPECIAL_CHAR; return SPECIAL_CHAR; }
@@ -17,6 +15,5 @@ int yylval;
 %%
 
 int yywrap() {
-    return 1;
-
+    return 1;
 }
