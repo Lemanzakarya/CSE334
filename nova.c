@@ -16,13 +16,13 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    yyin = file; // lexer için girdi dosyasını ayarla
+    yyin = file; // set input file for lexer
 
     int token;
-    int char_count = 0; // Karakter sayısını tutacak değişken
+    int char_count = 0; //The variable that holds the numver of char count
     while ((token = yylex()) != 0) {
-        // Karakter sayısını hesapla
-        if (token != WHITESPACE && token != EOL) {
+        // Calculate char number
+        if ( token != EOL) {
             char_count++;
         }
     }
